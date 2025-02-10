@@ -5,7 +5,7 @@ import streamlit as st
 
 with st.sidebar:
     random_state = st.number_input("Random seed:", 1, 1_000, 42)
-    n = st.slider("User Sessions n:", 1, 100_000, 5_000)
+    n = st.number_input("User Sessions n:", 1, 100_000, 5_000)
     st.divider()
     st.text("Configure (known) bias:")
     theta = st.slider("Position Bias $\\theta$", 0.01, 1.0, value=0.5, step=0.01)
