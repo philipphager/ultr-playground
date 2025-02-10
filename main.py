@@ -34,7 +34,7 @@ def log_posterior(theta, gamma, a_gamma, b_gamma, n, s, eps=1e-8):
 
 gamma_grid = np.linspace(0, 1, 1_000)
 gamma_post = log_posterior(theta, gamma_grid, a_gamma, b_gamma, m, s)
-gamma_post = gamma_post / np.trapz(gamma_post, gamma_grid)
+gamma_post = gamma_post / np.trapezoid(gamma_post, gamma_grid)
 
 df = pd.DataFrame({
     "gamma": gamma_grid,
